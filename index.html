@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <!-- Question 01 -->
+
+  <div class="form-container">
+    <h2>Signup Form</h2>
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <div class="form-group">
+      <button type="button" onclick="submit()">Submit</button>
+    </div>
+  </div>
+
+  <div class="result" id="result">
+    <h3>Form Data</h3>
+    <P><strong>First Name:</strong> <span id="displayFirstName"></span></P>
+    <P><strong>Last Name:</strong> <span id="displayLastName"></span></P>
+    <P><strong>Email:</strong> <span id="displayEmail"></span></P>
+  </div>
+
+
+  <!-- Question 02 -->
+
+  <div class="container">
+    <h5>Read More Button</h5>
+    <h1>Fairy Cakes Recipe</h1>
+    <img onmouseout="src='images/Fairy Cakes - 4.3 Landscape-10470.webp'" onmouseover="src='images/cupcake.gif'"
+      src="images/Fairy Cakes - 4.3 Landscape-10470.webp" alt="">
+
+    <h3>Recipe</h3>
+
+    <p id="para">
+      Our simple fairy cake recipe gives you soft, delicate and delicious cupcakes, drizzled in smooth,
+      deliciously-sweet Silver Spoon Glace Icing.
+      <span id="para2" style="display: none;">
+        These cupcakes make a great treat for birthdays, or a fun recipe to get the kids involved in baking. Not only
+        are they simple to make, but they’re also fun to decorate, letting you and your children get creative. We like
+        ours with icing and sprinkled with hundreds & thousands, but you can get creative and try fairy cakes with
+        chocolate chips, lemon drizzle, or buttercream icing.
+      </span>
+      <a href="javascript:void(0);" onclick="expand()" id="link"><em>Read more..</em></a>
+    </p>
+  </div>
+
+  <!-- Question 03 -->
+
+  <div class="form-div">
+    <h2>Student Form</h2>
+    <form id="studentForm" class="studentForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+      <label for="grade">Grade:</label>
+      <input type="text" id="grade" required>
+      <button type="button" onclick="addStudent()">Add Student</button>
+    </form>
+
+    <h2>Student Records</h2>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Grade</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div id="editForm" class="studentForm">
+      <h3>Edit Student</h3>
+      <label for="editName">Name:</label>
+      <input type="text" id="editName">
+      <label for="editAge">Age:</label>
+      <input type="number" id="editAge">
+      <label for="editGrade">Grade:</label>
+      <input type="text" id="editGrade">
+      <button type="button" onclick="saveEdit()">Save</button>
+      <button type="button" onclick="cancelEdit()">Cancel</button>
+    </div>
+
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
